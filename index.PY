@@ -1,6 +1,12 @@
-import pyperclip
-import keyboard
+try:
+    import pyperclip
+    import keyboard
+except ImportError:
+    print("Please install the required libraries by running: pip install pyperclip keyboard")
+    exit(1)
 
+
+print("Created by Skippy aka Alan")
 def type_paste():
     # Simulate CTRL + B
     keyboard.press_and_release('ctrl+b')
